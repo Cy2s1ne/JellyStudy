@@ -1,0 +1,50 @@
+### 测试JSON格式的问题评估
+POST http://localhost:8080/api/evaluation/question
+Content-Type: application/json
+
+{
+  "questionId": "test-q-001",
+  "questionContent": "What are the key features of Java programming language?",
+  "extractKnowledgePoints": true,
+  "assessDifficulty": true
+}
+
+### 测试纯文本格式的问题评估 - 纯文本
+POST http://localhost:8080/api/evaluation/question/text?questionId=test-q-002
+Content-Type: text/plain
+
+What are the design patterns commonly used in enterprise applications?
+
+### 测试纯文本格式的问题评估 - 带有{Chat ...}格式(需要移除的格式)
+POST http://localhost:8080/api/evaluation/question/text?questionId=test-q-003
+Content-Type: text/plain
+
+{Chat How to use MySQL?}
+
+### 测试纯文本格式的问题评估 - 复杂问题
+POST http://localhost:8080/api/evaluation/question/text?questionId=test-q-004
+Content-Type: text/plain
+
+What is the difference between Spring Boot and Spring Framework? What are the advantages of using Spring Boot for microservices?
+
+### 测试答案评估
+POST http://localhost:8080/api/evaluation/answer
+Content-Type: application/json
+
+{
+  "questionId": "test-q-001",
+  "questionContent": "What are the key features of Java programming language?",
+  "answerId": "test-a-001",
+  "answerContent": "Java is a high-level, class-based, object-oriented programming language. Key features include: platform independence through the Java Virtual Machine, automatic memory management with garbage collection, strong type checking, and extensive standard libraries. Java also supports multithreading, exception handling, and has a focus on security."
+}
+
+### 测试全面评估
+POST http://localhost:8080/api/evaluation/comprehensive
+Content-Type: application/json
+
+{
+  "questionId": "test-q-001",
+  "questionContent": "What are the key features of Java programming language?",
+  "answerId": "test-a-001",
+  "answerContent": "Java is a high-level, class-based, object-oriented programming language. Key features include: platform independence through the Java Virtual Machine, automatic memory management with garbage collection, strong type checking, and extensive standard libraries. Java also supports multithreading, exception handling, and has a focus on security."
+} 

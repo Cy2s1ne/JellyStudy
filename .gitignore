@@ -1,0 +1,82 @@
+# Maven生成的文件和目录
+target/
+**/target/
+*.jar
+*.war
+*.ear
+*.class
+
+# 编译文件
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# 日志文件
+*.log
+logs/
+log/
+
+# 虚拟机崩溃日志
+hs_err_pid*
+
+# IDE - IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+.idea_modules/
+out/
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.recommenders
+
+# IDE - VSCode
+.vscode/
+*.code-workspace
+.history/
+
+# 操作系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 配置文件中的敏感信息
+application-dev.properties
+application-prod.properties
+application-local.properties
+
+# 依赖管理工具
+.mvn/
+.gradle/
+build/
+
+# 其他
+*.bak
+*.versionsBackup
+*.releaseBackup
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+pom.xml.versionsBackup
+pom.xml.releaseBackup
+pom.xml.next
