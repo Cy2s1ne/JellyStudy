@@ -30,14 +30,6 @@ public class ChatController {
         logger.info("ChatController initialized with dependencies");
     }
 
-    //    @GetMapping("/evaluation/question")
-//    public String EvaluationQuestion(@RequestParam String questionId, @RequestParam String input) {
-//        String response = this.chatClient.prompt()
-//                .user(input)
-//                .call()
-//                .content();
-//        return response;
-//    }
     @GetMapping("/evaluation/question")
     @ResponseBody
     public String evaluationQuestion(@RequestParam("questionId") String questionId, @RequestParam("input") String input) {

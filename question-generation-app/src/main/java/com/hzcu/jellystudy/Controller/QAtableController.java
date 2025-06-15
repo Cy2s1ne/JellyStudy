@@ -115,7 +115,7 @@ public class QAtableController {
                         logger.info("Saved generated question to database with ID: {}", savedQA.get_id());
                     }
                     
-                    // 只处理第一个知识点，避免生成太多问题
+                    // 只处理每个热门问题的第一个知识点，避免生成太多问题
                     break;
                 }
             }

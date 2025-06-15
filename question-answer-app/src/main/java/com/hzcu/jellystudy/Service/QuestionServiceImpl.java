@@ -101,7 +101,7 @@ public class QuestionServiceImpl implements QuestionService {
         questionRepository.save(question);
     }
 
-    // 获取热门问题
+    // 获取活跃问题
     @Override
     public List<Question> getHotQuestions(int limit) {
         Page<Question> hotQuestions = questionRepository.findByStatusOrderByViewCountDescAnswerCountDesc(
@@ -129,10 +129,9 @@ public class QuestionServiceImpl implements QuestionService {
         return highPopularityQuestions;
     }
 
-    // 获取推荐问题列表
+    // 获取最新问题
     @Override
     public List<Question> getRecommendedQuestions(int limit) {
-        // 这里简化为获取最新问题，实际应用中可能需要更复杂的推荐算法
         Page<Question> recentQuestions = questionRepository.findAll(
                 PageRequest.of(0, limit, Sort.by(Sort.Direction.DESC, "createdAt")));
         return recentQuestions.getContent();

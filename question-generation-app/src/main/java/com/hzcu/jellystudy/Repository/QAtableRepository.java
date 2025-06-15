@@ -6,5 +6,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface QAtableRepository extends MongoRepository<QA_table, String> {
-    // 基本的CRUD操作通过MongoRepository已经提供
 } 

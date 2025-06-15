@@ -64,7 +64,7 @@ public class QuestionController {
         return ResponseEntity.ok(questions);
     }
 
-    // 获取热门问题
+    // 获取活跃问题
     @GetMapping("/hot")
     public ResponseEntity<List<Question>> getHotQuestions(
             @RequestParam(defaultValue = "10") int limit) {
@@ -72,7 +72,7 @@ public class QuestionController {
         return ResponseEntity.ok(questions);
     }
 
-    // 获取推荐问题列表
+    // 获取最新问题列表
     @GetMapping("/recommended")
     public ResponseEntity<List<Question>> getRecommendedQuestions(
             @RequestParam(defaultValue = "10") int limit) {
