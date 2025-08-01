@@ -59,7 +59,7 @@ JellyStudy是一个基于Java Spring Boot和Dubbo微服务架构设计的智能�
 ### 📥 构建步骤
 1. 克隆代码库
 ```bash
-git clone https://github.com/your-username/JellyStudy.git
+https://github.com/Cy2s1ne/JellyStudy.git
 cd JellyStudy
 ```
 
